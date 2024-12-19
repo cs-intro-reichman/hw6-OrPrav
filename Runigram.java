@@ -1,6 +1,9 @@
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
 
-/** A library of image processing functions. */
 public class Runigram {
 
 	public static void main(String[] args) {
@@ -8,17 +11,17 @@ public class Runigram {
 		//// Hide / change / add to the testing code below, as needed.
 		
 		// Tests the reading and printing of an image:	
-		Color[][] tinypic = read("tinypic.ppm");
-		print(tinypic);
+		// Color[][] tinypic = read("tinypic.ppm");
+		// print(tinypic);
 
-		// Creates an image which will be the result of various 
-		// image processing operations:
-		Color[][] image;
+		// // Creates an image which will be the result of various 
+		// // image processing operations:
+		// Color[][] image;
 
-		// Tests the horizontal flipping of an image:
-		image = flippedHorizontally(tinypic);
-		System.out.println();
-		print(image);
+		// // Tests the horizontal flipping of an image:
+		// image = flippedHorizontally(tinypic);
+		// System.out.println();
+		// print(image);
 		
 		//// Write here whatever code you need in order to test your work.
 		//// You can continue using the image array.
