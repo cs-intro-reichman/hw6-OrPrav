@@ -28,35 +28,28 @@ public class Runigram {
 	 * stored in the given PPM file. */
 	public static Color[][] read(String fileName) {
 		In in = new In(fileName);
-		// Reads the file header, ignoring the first and the third lines.
 		in.readString();
 		int numCols = in.readInt();
 		int numRows = in.readInt();
 		in.readInt();
-		// Creates the image array
 		Color[][] image = new Color[numRows][numCols];
-		// Reads the RGB values from the file into the image array. 
-		// For each pixel (i,j), reads 3 values from the file,
-		// creates from the 3 colors a new Color object, and 
-		// makes pixel (i,j) refer to that object.
-		//// Replace the following statement with your code.
-		return null;
+		System.out.println(in.readLine());	
+		for (int i=0; i<numRows; i++) {
+			for (int j=0; j<numCols; j++) {
+				image[i][j] = new Color(in.readInt(),in.readInt(),in.readInt());
+			}
+		}
+		return image;
 	}
 
-    // Prints the RGB values of a given color.
 	private static void print(Color c) {
 	    System.out.print("(");
-		System.out.printf("%3s,", c.getRed());   // Prints the red component
-		System.out.printf("%3s,", c.getGreen()); // Prints the green component
-        System.out.printf("%3s",  c.getBlue());  // Prints the blue component
+		System.out.printf("%3s,", c.getRed()); 
+		System.out.printf("%3s,", c.getGreen());
+        System.out.printf("%3s",  c.getBlue());
         System.out.print(")  ");
 	}
 
-	// Prints the pixels of the given image.
-	// Each pixel is printed as a triplet of (r,g,b) values.
-	// This function is used for debugging purposes.
-	// For example, to check that some image processing function works correctly,
-	// we can apply the function and then use this function to print the resulting image.
 	private static void print(Color[][] image) {
 		int row = image.length;
 		int col = image[0].length;
