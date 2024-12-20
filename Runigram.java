@@ -4,13 +4,11 @@ public class Runigram {
 
 	public static void main(String[] args) {
 	    
-		//// Hide / change / add to the testing code below, as needed.
 		
 		// Tests the reading and printing of an image:	
 		Color[][] tinypic = read("tinypic.ppm");
 		print(tinypic);
 
-		// // Creates an image which will be the result of various 
 		// // image processing operations:
 		Color[][] image;
 
@@ -19,7 +17,6 @@ public class Runigram {
 		System.out.println();
 		print(image);
 		
-		//// Write here whatever code you need in order to test your work.
 		//// You can continue using the image array.
 	}
 
@@ -178,7 +175,7 @@ public class Runigram {
 	
 	/** Creates a canvas for the given image. */
 	public static void setCanvas(Color[][] image) {
-		StdDraw.setTitle("Runigram 2023");
+		StdDraw.setTitle("2024");
 		int height = image.length;
 		int width = image[0].length;
 		StdDraw.setCanvasSize(width, height);
